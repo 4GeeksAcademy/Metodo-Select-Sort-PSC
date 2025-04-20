@@ -1,5 +1,52 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210831/pngtree-classy-luxury-casino-game-background-image_774371.jpg);
+    background-size: 100%;
+}
+
+.container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    background: radial-gradient(circle,rgb(9, 8, 8) 0%, rgb(0, 0, 0) 100%);
+    border: 20px solid rgb(220, 161, 22);
+    border-radius: 10px;
+    width: 800px;
+    height: 800px;
+
+}
+
+.carta {
+    border: 2px solid whitesmoke; 
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 95px;
+    height: 130px;
+    background: radial-gradient(circle,rgba(10, 6, 2, 1) 22%, rgba(77, 76, 66, 1) 86%);
+    box-shadow: 0 5px 5px  rgb(176, 215, 247);
+    
+}
+
+.pintaTop {  
+    font-size: 23px;
+    text-align:start;
+    margin-top: -3px;
+    color: rgb(249, 215, 0);
+}
+.number {
+    
+    font-size: 42px;
+    text-align: center;
+    color: rgb(249, 215, 0);
+}
+
+.pintaBack {
+    font-size: 23px; 
+    transform: rotate(180deg);
+    margin-right: 3px;
+    color: rgb(249, 215, 0);;
+  
+    
 }
