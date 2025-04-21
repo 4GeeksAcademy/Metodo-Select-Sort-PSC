@@ -86,16 +86,12 @@ if (aleatorioNum == "1") {
   carta.innerHTML = aleatorioNum;
 }
 
-/* ¡Perfecto! Sin modificar la estructura ni cambiar nada de tu código original, simplemente vamos a agregar una función y un eventListener al botón btnDraw para que, al hacer clic, se generen en .container tantas cartas como diga el input.
 
-Aquí tienes el código adicional que debes añadir al final de tu script para que funcione como tú quieres:
-
-javascript
-Copiar
-Editar
 btnDraw.addEventListener('click', () => {
   container.innerHTML = ''; // Limpia el contenedor
   const cantidad = parseInt(inputform.value);
+  console.log(cantidad);
+  
 
   if (!isNaN(cantidad) && cantidad > 0) {
     for (let i = 0; i < cantidad; i++) {
@@ -135,29 +131,3 @@ btnDraw.addEventListener('click', () => {
     alert("Por favor ingresa un número válido.");
   }
 });
-*/
-
-
-/*
-const cardContainer = document.querySelector("container");
-  const card = document.createElement("div");
-  card.classList.add("carta");
-
-
-btnDraw.addEventListener("click", function() {
-  const cardContainer = document.querySelector("container");
-  carta.innerHTML = ""; 
-
-generatedCards = [];
-  changeLog = [];
-
-  const cantidadInput = parseInt(carta.value);
-
-  for (let i = 0; i < cantidadInput; i++) {
-    let card = carta();
-    generatedCards.push(card);
-  }
-
-  changeLogElement.innerHTML = ""; // Clear the change log when drawing new cards
-});
-*/
