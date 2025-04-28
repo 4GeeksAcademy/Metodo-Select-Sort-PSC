@@ -6,9 +6,8 @@ body {
     background-size: 100%;
 }
 
-.container {
-    margin-top: 30px;
-    margin-bottom: 30px;
+#caja {
+    margin: 30px auto;
     padding-top: 5px;
     background: radial-gradient(circle, rgb(9, 8, 8) 0%, rgb(0, 0, 0) 100%);
     border: 20px solid rgb(220, 161, 22);
@@ -18,15 +17,23 @@ body {
 
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    height: auto;
+
+}
+
 .carta {
     border: 2px solid whitesmoke;
+    color: white;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 10px 5px;
     width: 95px;
     height: 130px;
-    background: radial-gradient(circle, rgba(10, 6, 2, 1) 22%, rgba(77, 76, 66, 1) 86%);
+    background: radial-gradient(circle, rgba(10, 6, 2, 1) 22%, rgba(77, 76, 66, 1) 86%) !important;
     box-shadow: 0 5px 5px rgb(176, 215, 247);
-
 }
 
 .pintaTop {

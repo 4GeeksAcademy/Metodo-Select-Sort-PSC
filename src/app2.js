@@ -12,79 +12,97 @@ const formulario = document.querySelector('#formulario')
 const inputform = document.createElement('input')
 const btnDraw = document.createElement('button')
 const btnSort = document.createElement('button')
-let carta = document.createElement('div')
-let pintaTop = document.createElement('div')
-let number = document.createElement('div')
-let pintaBack = document.createElement('div')
+
 
 const simbolos = ["♠", "♥", "♦", "♣"]
-const valores = ["A",2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"] 
-
-
-let aleatorioSim = simbolos[Math.floor(Math.random() * simbolos.length)];
-pintaTop.innerHTML = aleatorioSim
-pintaBack.innerHTML = aleatorioSim
-
-let aleatorioNum = valores[Math.floor(Math.random() * valores.length)];
-number.innerHTML = aleatorioNum
-
+const valores = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
 
 
 btnDraw.textContent = "Draw"
 btnSort.textContent = "Sort"
-formulario.textContent ="Cantidad de Cartas:"
+formulario.textContent = "Cantidad de Cartas:"
 formulario.appendChild(inputform)
 formulario.appendChild(btnDraw)
 formulario.appendChild(btnSort)
 
+btnDraw.addEventListener("click", function () {
+
+  container.innerHTML = ""
+
+  let i = 1
+  while (i <= inputform.value) {
+
+    let carta = document.createElement('div')
+    let pintaTop = document.createElement('div')
+    let number = document.createElement('div')
+    let pintaBack = document.createElement('div')
+    carta.classList.add('carta')
+
+    let aleatorioSim = simbolos[Math.floor(Math.random() * simbolos.length)];
+    pintaTop.innerHTML = aleatorioSim
+    pintaBack.innerHTML = aleatorioSim
+
+    let aleatorioNum = valores[Math.floor(Math.random() * valores.length)];
+    number.innerHTML = aleatorioNum
+
+    pintaTop.classList.add('pintaTop')
+    pintaTop.innerHTML = aleatorioSim
+    carta.appendChild(pintaTop)
 
 
-carta.classList.add('carta') 
-
-pintaTop.classList.add('pintaTop') 
-pintaTop.innerHTML = aleatorioSim 
-carta.appendChild(pintaTop)
+    number.classList.add('number')
+    number.innerHTML = aleatorioNum
+    carta.appendChild(number)
 
 
-number.classList.add('number') 
-number.innerHTML = aleatorioNum 
-carta.appendChild(number) 
+    pintaBack.classList.add('pintaBack')
+    pintaBack.innerHTML = aleatorioSim
+    carta.appendChild(pintaBack)
 
 
-pintaBack.classList.add('pintaBack') 
-pintaBack.innerHTML = aleatorioSim 
-carta.appendChild(pintaBack) 
+    if (aleatorioSim == "♥") {
+      pintaTop.classList.add("pintaTop")
+      pintaBack.classList.add("pintaBack");
 
-container.appendChild(carta) 
+    } else if (aleatorioSim == "♦") {
+      pintaTop.classList.add("pintaTop")
+      pintaBack.classList.add("pintaBack");
 
-if (aleatorioSim == "♥") {
-  pintaTop.classList.add(pintaTop) 
-  pintaBack.classList.add(pintaBack);
+    } else if (aleatorioSim == "♠") {
+      pintaTop.classList.add("pintaTop")
+      pintaBack.classList.add("pintaBack");
 
-} else if (aleatorioSim == "♦") {
-  pintaTop.classList.add(pintaTop)
-  pintaBack.classList.add(pintaBack);
+    } else {
+      pintaTop.classList.add("pintaTop")
+      pintaBack.classList.add("pintaBack");
+    }
 
-} else if (aleatorioSim == "♠") {
-  pintaTop.classList.add(pintaTop)
-  pintaBack.classList.add (pintaBack);
+    if (aleatorioNum == "1") {
+      carta.innerHTML = "A";
+    } else if (aleatorioNum == "11") {
+      carta.innerHTML = "J";
+    } else if (aleatorioNum == "12") {
+      carta.innerHTML = "Q";
+    } else if (aleatorioNum == "13") {
+      carta.innerHTML = "K";
+    } else {
+      carta.innerHTML = aleatorioNum;
+    }
 
-} else {
-  pintaTop.classList.add(pintaTop)
-  pintaBack.classList.add (pintaBack);
-}
 
-if (aleatorioNum == "1") {
-  carta.innerHTML = "A";
-} else if (aleatorioNum == "11") {
-  carta.innerHTML = "J";
-} else if (aleatorioNum == "12") {
-  carta.innerHTML = "Q";
-} else if (aleatorioNum == "13") {
-  carta.innerHTML = "K";
-} else {
-  carta.innerHTML = aleatorioNum;
-}
+    container.appendChild(carta);
+
+    i++
+  }
+
+})
+
+
+btnSort.addEventListener("click", function () {
+  alert("botonSort")
+
+
+})
 
 /*
 btnDraw.addEventListener('click', () => {
