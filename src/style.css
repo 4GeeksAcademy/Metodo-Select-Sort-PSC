@@ -13,8 +13,7 @@ body {
     border: 20px solid rgb(220, 161, 22);
     border-radius: 10px;
     width: 800px;
-    height: 800px;
-
+    min-height: 800px;
 }
 
 .container {
@@ -99,3 +98,9 @@ button {
     box-shadow: 0 5px 5px rgb(176, 215, 247);
 
     }
+
+    #ordenadas {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
